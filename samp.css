@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#parent {
+    max-width: 1200px;
+    width: 95%;
+    margin: 20px auto;
+    padding: 24px;
+    background-color: rgba(228, 222, 222, 0.486);
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+#parent > a {
+    grid-column: 1 / -1;
+    text-decoration: none;
+    color: rgb(12, 12, 12);
+    font-size: 18px;
+    font-weight: 600;
+    width: fit-content;
+}
+
+#parent > #par {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#parent > #par > input {
+    width: 100%;
+    max-width: 600px;
+    height: 44px;
+    padding: 0 16px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: rgb(252, 253, 253);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#parent > .cls {
+    width: 100%;
+    min-height: 460px;
+    padding: 16px;
+    border-radius: 20px;
+    background-color: rgb(255, 254, 254);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+#parent > .cls > .cls1 {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+#parent > .cls > .cls1:hover {
+    transform: scale(0.95);
+}
+
+#parent > div > p {
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 8px;
+}
+
+#parent > .cls > p:nth-child(3) {
+    font-size: 14px;
+    color: #555;
+}
+
+#parent > .cls > p:nth-child(4) {
+    background-color: black;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: inline-block;
+    width: fit-content;
+    font-size: 13px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+#parent > .cls > p:nth-child(5) {
+    text-decoration: line-through;
+    font-size: 16px;
+    color: rgb(129, 123, 123);
+    font-weight: normal;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#parent > .cls > p:nth-child(6) {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 54px;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#parent > .cls > .b1 {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    background-color: rgba(9, 83, 175, 0.973);
+    color: rgba(240, 248, 255, 0.879);
+    height: 40px;
+    width: calc(50% - 22px);
+    border-radius: 10px;
+}
+
+#parent > .cls > .b {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    background-color: rgba(231, 157, 8, 0.804);
+    height: 40px;
+    width: calc(50% - 22px);
+    border-radius: 10px;
+}
+
+/* Footer */
+#parent1 {
+    margin-top: 40px;
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    padding: 40px 5% 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+#parent1 ul {
+    list-style: none;
+    min-width: 150px;
+}
+
+#parent1 ul li {
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+#parent1 ul .li {
+    color: rgb(110, 112, 112);
+    font-weight: bold;
+}
+
+#parent1 ul li:not(.li):hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#parent1 > hr {
+    display: none;
+}
+
+footer {
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    #parent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    #parent {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+    #parent1 ul {
+        width: 100%;
+    }
+}
