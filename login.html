@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowers</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(to right,#fdbc23,#b94e9b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            width: 450px;
+            height: 500px;
+           display: flex;
+           flex-direction: column;
+           background-color: rgba(64, 32, 207, 0.06);
+           box-shadow: 0 8px 32px 0 rgba(233, 232, 235, 0.37);
+           border-left: 1px solid rgb(255,255,255,.3);
+           border-top: 1px solid rgb(255,255,255,.3);
+           border-radius: 20px;
+        }
+        form:before{
+            content: '';
+            position: absolute;
+            bottom: 3%;
+            right: 28%;
+            height: 200px;
+            width: 200px;
+            border-color: #e42baf;
+            border-radius: 50%;
+            z-index: -1;
+            opacity: .8;
+        }
+        form::after{
+            content: '';
+            position: absolute;
+            bottom: 3%;
+            left: 78%;
+            height: 200px;
+            width: 200px;
+            border-color: #b83794;
+            border-radius: 50%;
+            z-index: -1;
+            opacity: .8;
+        }
+        h1{
+            color: rgba(240, 241, 246, 0.905);
+            opacity: .9;
+            font-size: 50px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        #parent>form>input{
+            /* border: none; */
+            outline: none;
+            height: 50px;
+            font-size: 16px;
+            border-radius: 15px;
+            margin-top: 20px;
+            padding-left: 20px;
+            border: 2px solid rgba(224, 221, 221, 0.355);
+            box-shadow:8px 8px 1 #b8b8b8,
+        -8px -8px 1 #ffffff;
+        }
+        #parent>form>input:hover{
+            border: 2px solid rgba(19, 3, 3, 0.51);
+        }
+        #parent>form>legend{
+            color: rgba(248, 249, 250, 0.826);
+            font-size: 20px;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        #parent>form>#log{
+            height: 40px;
+            margin-top: 20px;
+            width: 50%;
+            margin-left: 25%;
+            border: none;
+            border-radius: 20px;
+            background-color: rgba(224, 225, 228, 0.911);
+            color: rgba(14, 40, 238, 0.916);
+            box-shadow:3px 3px 1 #dad8d8;
+            font-size: 17px;
+        }
+        #parent>form>a{
+            text-decoration: none;
+            margin-top: 20px;
+            text-align: center;
+            color: rgba(15, 53, 224, 0.844);
+            padding: 10px;
+            border-radius: 15px;
+             
+        }
+        #parent>form>a:hover{
+            background-color: rgba(215, 218, 218, 0.308);
+            text-decoration: underline;
+            height: 40px;
+            
+            
+        }
+        #showpass {
+            position: absolute;
+            right: 550px;
+            top: 53%;
+            /* transform: translateY(-50%); */
+            border: none;
+            background: transparent;
+            color: #130101;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    
+   <div id="parent">
+    <form action="" onsubmit="return false;">
+
+        <h1>Login</h1>
+
+        <legend>UserName</legend>
+        <input type="text" placeholder="Enter Username" id="username">
+
+        <legend>Password</legend>
+        <input type="password" placeholder="Enter Password" id="pass">
+
+        <button type="button" id="showpass" onclick="Buttonclick()">
+            Show
+        </button>
+
+        <button type="submit" id="log">Login</button>
+        <a href="#">Forgotten Password?</a>
+
+    </form>
+</div>
+    <script>
+        function Buttonclick() {
+
+             let password = document.getElementById("pass");
+             let showpass = document.getElementById("showpass");
+         
+             if (password.type === "password") {
+         
+                 password.type = "text";
+                 showpass.innerText = "Hide";
+         
+             } else {
+         
+                 password.type = "password";
+                 showpass.innerText = "Show";
+         
+             }
+        }
+
+    </script>
+</body>
+</html>
